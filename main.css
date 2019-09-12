@@ -1,4 +1,8 @@
 #note {
-    height:100px;
+    height:100vh;
     border-style: bold;
+}
+
+#title {
+    text-align: center;
 }

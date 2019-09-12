@@ -1,8 +1,16 @@
 #note {
     height:100vh;
     border-style: bold;
+    color: white;
+    border:1px solid bisque;
 }
 
 #title {
     text-align: center;
+    color: white;
+    border:1px solid bisque;
+}
+
+html, body{
+    background-color: black;
 }

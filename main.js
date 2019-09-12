@@ -11,20 +11,19 @@ window.addEventListener('DOMContentLoaded', (event) => {
             console.log(msg);
             document.querySelector('#note').innerHTML = msg;
         }
-        else {
+        if (data){
             console.log(data);
             document.querySelector('#note').innerHTML = data;
-
-            setInterval(() => {
-                fs.writeFile('/note', data, (err) => {
-                    if (err) console.log("error: " + err);
-                    else{
-                        data = document.querySelector('#note').innerHTML;
-                        console.log("saving: " + data);
-                    }
-                });
-            }, 2000);
         }
+        setInterval(() => {
+            fs.writeFile('/note', data, (err) => {
+                if (err) console.log("error: " + err);
+                else{
+                    data = document.querySelector('#note').innerHTML;
+                    console.log("saving: " + data);
+                }
+            });
+        }, 2000);
     })
 });
 

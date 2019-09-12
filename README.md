@@ -1,7 +1,7 @@
 # MicroNote
 A note taking web app.
 
-#Installation
+# Installation
 
 Clone the repo into your local machine
 ```

@@ -9,7 +9,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
         if (err) {
             console.log(msg);
-            document.querySelector('#note').innerHTML = msg;
+            //document.querySelector('#note').innerHTML = msg;
         }
         if (data){
             console.log(data);
@@ -23,7 +23,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
                     console.log("saving: " + data);
                 }
             });
-        }, 2000);
+        }, 500);
     })
 });
 

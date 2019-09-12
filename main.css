@@ -2,15 +2,22 @@
     height:100vh;
     border-style: bold;
     color: white;
-    border:1px solid bisque;
+    border:2px solid bisque;
 }
 
 #title {
     text-align: center;
     color: white;
-    border:1px solid bisque;
+    border:2px solid bisque;
 }
 
+/* Thanks to https://stackoverflow.com/users/2442099/g-cyr for this snippet of code */
+div:empty:before {
+    content:attr(placeholder);
+    color:gray
+  }
+
 html, body{
+    font-family: 'Assistant', sans-serif;
     background-color: black;
 }

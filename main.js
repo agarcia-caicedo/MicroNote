@@ -2,7 +2,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
     console.log('DOM fully loaded and parsed');
 
     const fs = new Filer.FileSystem();
-    var noteData;
 
     fs.readFile('/note', 'utf8', (err, data) => {
         const msg = "Welcome to MicroNote!";
@@ -32,9 +31,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
         function countWords(){
             var words = document.querySelector('#note').innerHTML;
-            count = words.trim().length;
-            console.log(count);
-            document.querySelector('#count').innerHTML = count;
+            var wordCount = words.split(' ').length;
+            console.log(wordCount);
+            document.querySelector('#word-count').innerHTML = wordCount;
 
     }
     })

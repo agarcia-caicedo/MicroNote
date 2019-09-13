@@ -1,6 +1,8 @@
 # MicroNote
 A note taking web app.
 
+https://nianjack.github.io/MicroNote
+
 # Installation
 
 Clone the repo into your local machine

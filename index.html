@@ -13,8 +13,11 @@
 <body>
     <!-- This is a comment -->
     <h1 id="title">A Note Taking Web App</h1>
-    <div></div>
-    <div id="note" contenteditable placeholder="Welcome to MicroNote! Enter your notes here..."></div>
+    <br>
+    <div>
+    <span>Word Count: </span><span id="count">0</span>
+    </div>
+    <div id="note" contenteditable placeholder="Welcome to MicroNote! Enter your notes here..." onchange="countWord()"></div>
     <script src="https://unpkg.com/filer/dist/filer.min.js"></script>
     <script src="./main.js"></script>
 </body>

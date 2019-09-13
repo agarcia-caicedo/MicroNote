@@ -24,6 +24,14 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 }
             });
         }, 500);
+
+        function countWords(){
+            var words = document.querySelector('#note').innerHTML;
+            var count = words.trim().length();
+            console.log(count);
+             document.querySelector('#count').innerHTML = count;
+
+    }
     })
 });
 

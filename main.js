@@ -10,14 +10,14 @@ window.addEventListener('DOMContentLoaded', (event) => {
             console.log(msg);
             //document.querySelector('#note').innerHTML = msg;
         }
-        if (data){
+        if (data) {
             console.log(data);
             document.querySelector('#note').innerHTML = data;
         }
         setInterval(() => {
             fs.writeFile('/note', data, (err) => {
                 if (err) console.log("error: " + err);
-                else{
+                else {
                     data = document.querySelector('#note').innerHTML;
                     console.log("saving: " + data);
                 }
@@ -29,13 +29,23 @@ window.addEventListener('DOMContentLoaded', (event) => {
             countWords();
         }, 200);
 
-        function countWords(){
+        function countWords() {
             var words = document.querySelector('#note').innerHTML;
-            var wordCount = words.split(' ').length;
+            words = words.match(/\w+/gi);
+
+            var wordCount = 0;
+
+            if (words) {
+                for (i = 0; i < words.length; i++) {
+                    if (words[i] != 'nbsp') {
+                        wordCount += 1;
+                    }
+                }
+            }
             console.log(wordCount);
             document.querySelector('#word-count').innerHTML = wordCount;
 
-    }
+        }
     })
 });
 

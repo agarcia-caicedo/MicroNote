@@ -37,11 +37,12 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
             if (words) {
                 for (i = 0; i < words.length; i++) {
-                    if (words[i] != 'nbsp') {
-                        wordCount += 1;
+                    if (words[i] != 'nbsp' && words[i] != 'div' && words[i] != 'br') {
+                        wordCount++;
                     }
                 }
             }
+            // console.log(words)
             console.log(wordCount);
             document.querySelector('#word-count').innerHTML = wordCount;
 

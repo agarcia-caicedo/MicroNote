@@ -22,7 +22,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
                     console.log("saving: " + data);
                 }
             });
-        }, 500);
+        }, 50000);
 
         setInterval(() => {
             console.log("counting");

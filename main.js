@@ -25,24 +25,29 @@ window.addEventListener('DOMContentLoaded', (event) => {
         }, 50000);
 
         setInterval(() => {
-            console.log("counting");
+            //console.log("counting");
             countWords();
         }, 200);
 
         function countWords() {
             var words = document.querySelector('#note').innerHTML;
+
+            words = words.replace(/&nbsp;+/g, "");
+            words = words.replace(/&lt;+/g, "");
+            words = words.replace(/&gt;+/g, "");
+            words = words.replace(/&amp;+/g, "");
+            words = words.replace(/<[^>]*>/g, " ");
+            words = words.replace(/_+/g, " ");
             words = words.match(/\w+/gi);
 
             var wordCount = 0;
 
             if (words) {
                 for (i = 0; i < words.length; i++) {
-                    if (words[i] != 'nbsp' && words[i] != 'div' && words[i] != 'br') {
                         wordCount++;
-                    }
                 }
             }
-            // console.log(words)
+            console.log(words)
             console.log(wordCount);
             document.querySelector('#word-count').innerHTML = wordCount;
 
